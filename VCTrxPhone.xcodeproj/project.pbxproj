@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38DC47BB18588574007848B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DC47BA18588574007848B5 /* Foundation.framework */; };
+		38DC47BD18588574007848B5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DC47BC18588574007848B5 /* CoreGraphics.framework */; };
+		38DC47BF18588574007848B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DC47BE18588574007848B5 /* UIKit.framework */; };
+		38DC47C518588574007848B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38DC47C318588574007848B5 /* InfoPlist.strings */; };
+		38DC47C718588574007848B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DC47C618588574007848B5 /* main.m */; };
+		38DC47CB18588574007848B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DC47CA18588574007848B5 /* AppDelegate.m */; };
+		38DC47CE18588574007848B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38DC47CC18588574007848B5 /* Main.storyboard */; };
+		38DC47D118588574007848B5 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DC47D018588574007848B5 /* MasterViewController.m */; };
+		38DC47D418588574007848B5 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DC47D318588574007848B5 /* DetailViewController.m */; };
+		38DC47D618588574007848B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38DC47D518588574007848B5 /* Images.xcassets */; };
+		38DC47DD18588574007848B5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DC47DC18588574007848B5 /* XCTest.framework */; };
+		38DC47DE18588574007848B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DC47BA18588574007848B5 /* Foundation.framework */; };
+		38DC47DF18588574007848B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DC47BE18588574007848B5 /* UIKit.framework */; };
+		38DC47E718588574007848B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38DC47E518588574007848B5 /* InfoPlist.strings */; };
+		38DC47E918588574007848B5 /* VCTrxPhoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DC47E818588574007848B5 /* VCTrxPhoneTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		38DC47E018588574007848B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38DC47AF18588574007848B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38DC47B618588574007848B5;
+			remoteInfo = VCTrxPhone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		38DC47B718588574007848B5 /* VCTrxPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VCTrxPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38DC47BA18588574007848B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		38DC47BC18588574007848B5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		38DC47BE18588574007848B5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		38DC47C218588574007848B5 /* VCTrxPhone-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VCTrxPhone-Info.plist"; sourceTree = "<group>"; };
+		38DC47C418588574007848B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		38DC47C618588574007848B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		38DC47C818588574007848B5 /* VCTrxPhone-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VCTrxPhone-Prefix.pch"; sourceTree = "<group>"; };
+		38DC47C918588574007848B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		38DC47CA18588574007848B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		38DC47CD18588574007848B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		38DC47CF18588574007848B5 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		38DC47D018588574007848B5 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		38DC47D218588574007848B5 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		38DC47D318588574007848B5 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		38DC47D518588574007848B5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		38DC47DB18588574007848B5 /* VCTrxPhoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VCTrxPhoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38DC47DC18588574007848B5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		38DC47E418588574007848B5 /* VCTrxPhoneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VCTrxPhoneTests-Info.plist"; sourceTree = "<group>"; };
+		38DC47E618588574007848B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		38DC47E818588574007848B5 /* VCTrxPhoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCTrxPhoneTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38DC47B418588574007848B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38DC47BD18588574007848B5 /* CoreGraphics.framework in Frameworks */,
+				38DC47BF18588574007848B5 /* UIKit.framework in Frameworks */,
+				38DC47BB18588574007848B5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38DC47D818588574007848B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38DC47DD18588574007848B5 /* XCTest.framework in Frameworks */,
+				38DC47DF18588574007848B5 /* UIKit.framework in Frameworks */,
+				38DC47DE18588574007848B5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38DC47AE18588574007848B5 = {
+			isa = PBXGroup;
+			children = (
+				38DC47C018588574007848B5 /* VCTrxPhone */,
+				38DC47E218588574007848B5 /* VCTrxPhoneTests */,
+				38DC47B918588574007848B5 /* Frameworks */,
+				38DC47B818588574007848B5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		38DC47B818588574007848B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38DC47B718588574007848B5 /* VCTrxPhone.app */,
+				38DC47DB18588574007848B5 /* VCTrxPhoneTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38DC47B918588574007848B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38DC47BA18588574007848B5 /* Foundation.framework */,
+				38DC47BC18588574007848B5 /* CoreGraphics.framework */,
+				38DC47BE18588574007848B5 /* UIKit.framework */,
+				38DC47DC18588574007848B5 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		38DC47C018588574007848B5 /* VCTrxPhone */ = {
+			isa = PBXGroup;
+			children = (
+				38DC47C918588574007848B5 /* AppDelegate.h */,
+				38DC47CA18588574007848B5 /* AppDelegate.m */,
+				38DC47CC18588574007848B5 /* Main.storyboard */,
+				38DC47CF18588574007848B5 /* MasterViewController.h */,
+				38DC47D018588574007848B5 /* MasterViewController.m */,
+				38DC47D218588574007848B5 /* DetailViewController.h */,
+				38DC47D318588574007848B5 /* DetailViewController.m */,
+				38DC47D518588574007848B5 /* Images.xcassets */,
+				38DC47C118588574007848B5 /* Supporting Files */,
+			);
+			path = VCTrxPhone;
+			sourceTree = "<group>";
+		};
+		38DC47C118588574007848B5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				38DC47C218588574007848B5 /* VCTrxPhone-Info.plist */,
+				38DC47C318588574007848B5 /* InfoPlist.strings */,
+				38DC47C618588574007848B5 /* main.m */,
+				38DC47C818588574007848B5 /* VCTrxPhone-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		38DC47E218588574007848B5 /* VCTrxPhoneTests */ = {
+			isa = PBXGroup;
+			children = (
+				38DC47E818588574007848B5 /* VCTrxPhoneTests.m */,
+				38DC47E318588574007848B5 /* Supporting Files */,
+			);
+			path = VCTrxPhoneTests;
+			sourceTree = "<group>";
+		};
+		38DC47E318588574007848B5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				38DC47E418588574007848B5 /* VCTrxPhoneTests-Info.plist */,
+				38DC47E518588574007848B5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38DC47B618588574007848B5 /* VCTrxPhone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38DC47EC18588574007848B5 /* Build configuration list for PBXNativeTarget "VCTrxPhone" */;
+			buildPhases = (
+				38DC47B318588574007848B5 /* Sources */,
+				38DC47B418588574007848B5 /* Frameworks */,
+				38DC47B518588574007848B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VCTrxPhone;
+			productName = VCTrxPhone;
+			productReference = 38DC47B718588574007848B5 /* VCTrxPhone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		38DC47DA18588574007848B5 /* VCTrxPhoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38DC47EF18588574007848B5 /* Build configuration list for PBXNativeTarget "VCTrxPhoneTests" */;
+			buildPhases = (
+				38DC47D718588574007848B5 /* Sources */,
+				38DC47D818588574007848B5 /* Frameworks */,
+				38DC47D918588574007848B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38DC47E118588574007848B5 /* PBXTargetDependency */,
+			);
+			name = VCTrxPhoneTests;
+			productName = VCTrxPhoneTests;
+			productReference = 38DC47DB18588574007848B5 /* VCTrxPhoneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		38DC47AF18588574007848B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Jim;
+				TargetAttributes = {
+					38DC47DA18588574007848B5 = {
+						TestTargetID = 38DC47B618588574007848B5;
+					};
+				};
+			};
+			buildConfigurationList = 38DC47B218588574007848B5 /* Build configuration list for PBXProject "VCTrxPhone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 38DC47AE18588574007848B5;
+			productRefGroup = 38DC47B818588574007848B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38DC47B618588574007848B5 /* VCTrxPhone */,
+				38DC47DA18588574007848B5 /* VCTrxPhoneTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38DC47B518588574007848B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38DC47D618588574007848B5 /* Images.xcassets in Resources */,
+				38DC47C518588574007848B5 /* InfoPlist.strings in Resources */,
+				38DC47CE18588574007848B5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38DC47D918588574007848B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38DC47E718588574007848B5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38DC47B318588574007848B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38DC47CB18588574007848B5 /* AppDelegate.m in Sources */,
+				38DC47D118588574007848B5 /* MasterViewController.m in Sources */,
+				38DC47C718588574007848B5 /* main.m in Sources */,
+				38DC47D418588574007848B5 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38DC47D718588574007848B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38DC47E918588574007848B5 /* VCTrxPhoneTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		38DC47E118588574007848B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38DC47B618588574007848B5 /* VCTrxPhone */;
+			targetProxy = 38DC47E018588574007848B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		38DC47C318588574007848B5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38DC47C418588574007848B5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		38DC47CC18588574007848B5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38DC47CD18588574007848B5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		38DC47E518588574007848B5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38DC47E618588574007848B5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		38DC47EA18588574007848B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		38DC47EB18588574007848B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		38DC47ED18588574007848B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VCTrxPhone/VCTrxPhone-Prefix.pch";
+				INFOPLIST_FILE = "VCTrxPhone/VCTrxPhone-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		38DC47EE18588574007848B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VCTrxPhone/VCTrxPhone-Prefix.pch";
+				INFOPLIST_FILE = "VCTrxPhone/VCTrxPhone-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		38DC47F018588574007848B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VCTrxPhone.app/VCTrxPhone";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VCTrxPhone/VCTrxPhone-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VCTrxPhoneTests/VCTrxPhoneTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		38DC47F118588574007848B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VCTrxPhone.app/VCTrxPhone";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VCTrxPhone/VCTrxPhone-Prefix.pch";
+				INFOPLIST_FILE = "VCTrxPhoneTests/VCTrxPhoneTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38DC47B218588574007848B5 /* Build configuration list for PBXProject "VCTrxPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38DC47EA18588574007848B5 /* Debug */,
+				38DC47EB18588574007848B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38DC47EC18588574007848B5 /* Build configuration list for PBXNativeTarget "VCTrxPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38DC47ED18588574007848B5 /* Debug */,
+				38DC47EE18588574007848B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		38DC47EF18588574007848B5 /* Build configuration list for PBXNativeTarget "VCTrxPhoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38DC47F018588574007848B5 /* Debug */,
+				38DC47F118588574007848B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 38DC47AF18588574007848B5 /* Project object */;
+}
