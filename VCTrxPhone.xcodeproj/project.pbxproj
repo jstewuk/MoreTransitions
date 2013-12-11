@@ -22,6 +22,7 @@
 		38DC47DF18588574007848B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DC47BE18588574007848B5 /* UIKit.framework */; };
 		38DC47E718588574007848B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38DC47E518588574007848B5 /* InfoPlist.strings */; };
 		38DC47E918588574007848B5 /* VCTrxPhoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DC47E818588574007848B5 /* VCTrxPhoneTests.m */; };
+		38DC47F418588AB4007848B5 /* AnimationController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DC47F318588AB4007848B5 /* AnimationController1.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		38DC47E418588574007848B5 /* VCTrxPhoneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VCTrxPhoneTests-Info.plist"; sourceTree = "<group>"; };
 		38DC47E618588574007848B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		38DC47E818588574007848B5 /* VCTrxPhoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCTrxPhoneTests.m; sourceTree = "<group>"; };
+		38DC47F218588AB4007848B5 /* AnimationController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationController1.h; sourceTree = "<group>"; };
+		38DC47F318588AB4007848B5 /* AnimationController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationController1.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				38DC47C918588574007848B5 /* AppDelegate.h */,
 				38DC47CA18588574007848B5 /* AppDelegate.m */,
 				38DC47CC18588574007848B5 /* Main.storyboard */,
+				38DC47F218588AB4007848B5 /* AnimationController1.h */,
+				38DC47F318588AB4007848B5 /* AnimationController1.m */,
 				38DC47CF18588574007848B5 /* MasterViewController.h */,
 				38DC47D018588574007848B5 /* MasterViewController.m */,
 				38DC47D218588574007848B5 /* DetailViewController.h */,
@@ -256,6 +261,7 @@
 			files = (
 				38DC47CB18588574007848B5 /* AppDelegate.m in Sources */,
 				38DC47D118588574007848B5 /* MasterViewController.m in Sources */,
+				38DC47F418588AB4007848B5 /* AnimationController1.m in Sources */,
 				38DC47C718588574007848B5 /* main.m in Sources */,
 				38DC47D418588574007848B5 /* DetailViewController.m in Sources */,
 			);

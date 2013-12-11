@@ -9,13 +9,22 @@
 #import "MasterViewController.h"
 
 #import "DetailViewController.h"
+#import "AnimationController1.h"
 
-@interface MasterViewController () {
-    NSArray *_objects;
-}
+@interface MasterViewController () <UIViewControllerTransitioningDelegate, UINavigationControllerDelegate>
+@property (nonatomic, strong) NSArray *objects;
+@property (nonatomic, strong) AnimationController1 *animationController;
+
 @end
 
 @implementation MasterViewController
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super initWithCoder:aDecoder]) {
+        _animationController = [[AnimationController1 alloc] init];
+    }
+    return self;
+}
 
 - (void)awakeFromNib
 {
@@ -25,6 +34,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationController.delegate = self;
     
     _objects = @[@"Tx #1", @"Tx #2", @"Tx #3"];
 }
@@ -66,4 +76,24 @@
     }
 }
 
+#pragma mark - UIViewControllerTransitioningDelegate
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
+                                                                  presentingController:(UIViewController *)presenting
+                                                                      sourceController:(UIViewController *)source
+{
+    return self.animationController;
+}
+
+
+#pragma mark - UINavigationControllerDelegate
+
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                  animationControllerForOperation:(UINavigationControllerOperation)operation
+                                               fromViewController:(UIViewController *)fromVC
+                                                 toViewController:(UIViewController *)toVC
+{
+    self.animationController.reverse = operation == UINavigationControllerOperationPop;
+    return self.animationController;
+}
 @end
