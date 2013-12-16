@@ -1,23 +1,23 @@
 //
-//  AnimationController1.m
+//  BottomToTop.m
 //  VCTrxPhone
 //
 //  Created by Jim on 12/11/13.
 //  Copyright (c) 2013 Jim. All rights reserved.
 //
 
-#import "AnimationController1.h"
+#import "BottomToTop.h"
 
-@interface AnimationController1 ()
+@interface BottomToTop ()
 
 @end
 
-@implementation AnimationController1
+@implementation BottomToTop
 
 #pragma mark - UIViewControllerAnimatedTransitioning
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
-    return 2.0;
+    return 1.0;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
@@ -33,10 +33,10 @@
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
     CGRect poppedFrame = CGRectOffset(pushedFrame, 0, screenBounds.size.height);
     
-    toViewController.view.frame = self.reverse ? pushedFrame : poppedFrame;
+    toViewController.view.frame = self.isPopping ? pushedFrame : poppedFrame;
     
     // add the view to the container
-    if (! self.reverse) {
+    if (! self.isPopping) {
         [containerView addSubview:toViewController.view];
     } else {
         [containerView insertSubview:toViewController.view atIndex:0];
@@ -48,7 +48,7 @@
     [UIView
      animateWithDuration:duration
      animations:^{
-         if (! self.reverse) {
+         if (! self.isPopping) {
              toViewController.view.frame =  pushedFrame;
          } else
              fromViewController.view.frame = poppedFrame;

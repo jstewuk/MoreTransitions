@@ -9,11 +9,14 @@
 #import "MasterViewController.h"
 
 #import "DetailViewController.h"
-#import "AnimationController1.h"
+#import "AnimationControllerBase.h"
+#import "BottomToTop.h"
+#import "TopToBottom.h"
+#import "ExpandFromCenter.h"
 
-@interface MasterViewController () <UIViewControllerTransitioningDelegate, UINavigationControllerDelegate>
+@interface MasterViewController () <UIViewControllerTransitioningDelegate, UINavigationControllerDelegate, UITableViewDelegate>
 @property (nonatomic, strong) NSArray *objects;
-@property (nonatomic, strong) AnimationController1 *animationController;
+@property (nonatomic, strong) AnimationControllerBase *animationController;
 
 @end
 
@@ -21,7 +24,6 @@
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
-        _animationController = [[AnimationController1 alloc] init];
     }
     return self;
 }
@@ -36,7 +38,13 @@
     [super viewDidLoad];
     self.navigationController.delegate = self;
     
-    _objects = @[@"Tx #1", @"Tx #2", @"Tx #3"];
+    // Instantiate animations:
+    _objects = @[
+                 [[BottomToTop alloc] init],
+                 [[TopToBottom alloc] init],
+                 [[ExpandFromCenter alloc] init]
+                 ];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,18 +69,22 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSString *object = _objects[indexPath.row];
-    cell.textLabel.text = object;
+    AnimationControllerBase *object = _objects[indexPath.row];
+    cell.textLabel.text = object.animationName;
     return cell;
 }
 
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.animationController = _objects[indexPath.row];
+    return indexPath;
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
+        AnimationControllerBase *object = _objects[indexPath.row];
+        [[segue destinationViewController] setDetailItem:object.animationName];
     }
 }
 
@@ -93,7 +105,7 @@
                                                fromViewController:(UIViewController *)fromVC
                                                  toViewController:(UIViewController *)toVC
 {
-    self.animationController.reverse = operation == UINavigationControllerOperationPop;
+    self.animationController.isPopping = operation == UINavigationControllerOperationPop;
     return self.animationController;
 }
 @end

@@ -1,0 +1,14 @@
+//
+//  BottomToTop.h
+//  VCTrxPhone
+//
+//  Created by Jim on 12/11/13.
+//  Copyright (c) 2013 Jim. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "AnimationControllerBase.h"
+
+@interface BottomToTop : AnimationControllerBase
+
+@end
