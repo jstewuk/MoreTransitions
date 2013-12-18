@@ -18,7 +18,8 @@
     UIView *containerView = [transitionContext containerView];
     
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
-    CGPoint screenCenter = CGPointMake(screenBounds.size.width / 2.0, screenBounds.size.height /2.0);
+    CGPoint containerCenter = CGPointMake(screenBounds.size.width /2.0, screenBounds.size.height / 2.0);
+    //CGPoint containerCenter = CGPointMake(containerView.bounds.size.width / 2.0, containerView.bounds.size.height /2.0);
     CGAffineTransform tinyTransform = CGAffineTransformMakeScale(.001, .001);
     CGAffineTransform twistTransform = CGAffineTransformMakeRotation(M_PI_2);
     CGAffineTransform startTransform = CGAffineTransformConcat(tinyTransform, twistTransform);
@@ -27,7 +28,7 @@
     
     if (self.reverse) {
         UIImageView *snapView = [[UIImageView alloc] initWithImage:[self renderView:fromViewController.view]];
-        snapView.center = screenCenter;
+        snapView.center = containerCenter;
         snapView.transform = CGAffineTransformIdentity;
         
         [containerView insertSubview:snapView belowSubview:fromViewController.view];
@@ -41,12 +42,14 @@
          }
          completion:^(BOOL finished) {
              [snapView removeFromSuperview];
-             [fromViewController.view removeFromSuperview];
+             [fromViewController.view setAlpha:1.0];
+             fromViewController.view.transform = startTransform;
+             //[fromViewController.view removeFromSuperview];
              [transitionContext completeTransition:! [transitionContext transitionWasCancelled]];
          }];
     } else {
         UIImageView *snapView = [[UIImageView alloc] initWithImage:[self renderView:toViewController.view]];
-        snapView.center = screenCenter;
+        snapView.center = containerCenter;
         snapView.transform = startTransform;
         
         [containerView addSubview:snapView];
