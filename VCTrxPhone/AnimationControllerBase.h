@@ -13,7 +13,7 @@
 /**
  isPopping == YES: view controller is getting popped off the stack
  */
-@property (nonatomic, assign) BOOL isPopping;
+@property (nonatomic, assign) BOOL reverse;
 @property (nonatomic, copy) NSString *animationName;
 
 @end

@@ -28,29 +28,35 @@
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
     CGRect poppedFrame = CGRectOffset(pushedFrame, 0, - screenBounds.size.height);
     
-    toViewController.view.frame = self.isPopping ? pushedFrame : poppedFrame;
+    toViewController.view.frame = self.reverse ? pushedFrame : poppedFrame;
     
-    // add the view to the container
-    if (! self.isPopping) {
-        [containerView addSubview:toViewController.view];
-    } else {
-        [containerView insertSubview:toViewController.view atIndex:0];
-    }
-    
-    // animate
     NSTimeInterval duration = [self transitionDuration:transitionContext];
     
-    [UIView
-     animateWithDuration:duration
-     animations:^{
-         if (! self.isPopping) {
+    if (self.reverse) {
+        toViewController.view.frame = pushedFrame;
+        [containerView insertSubview:toViewController.view atIndex:0];
+        
+        [UIView
+         animateWithDuration:duration
+         animations:^{
+              fromViewController.view.frame = poppedFrame;
+         }
+         completion:^(BOOL finished) {
+             [transitionContext completeTransition:! [transitionContext transitionWasCancelled]];
+         }];
+    } else {
+        toViewController.view.frame = poppedFrame;
+        [containerView addSubview:toViewController.view];
+        
+        [UIView
+         animateWithDuration:duration
+         animations:^{
              toViewController.view.frame =  pushedFrame;
-         } else
-             fromViewController.view.frame = poppedFrame;
-     }
-     completion:^(BOOL finished) {
-         [transitionContext completeTransition:YES];
-     }];
+         }
+         completion:^(BOOL finished) {
+             [transitionContext completeTransition:! [transitionContext transitionWasCancelled]];
+         }];
+    }
 }
 
 

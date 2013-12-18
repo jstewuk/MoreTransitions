@@ -13,10 +13,12 @@
 #import "BottomToTop.h"
 #import "TopToBottom.h"
 #import "ExpandFromCenter.h"
+#import "SwipeInteractionController.h"
 
 @interface MasterViewController () <UIViewControllerTransitioningDelegate, UINavigationControllerDelegate, UITableViewDelegate>
 @property (nonatomic, strong) NSArray *objects;
 @property (nonatomic, strong) AnimationControllerBase *animationController;
+@property (nonatomic, strong) SwipeInteractionController *swipeInteractionController;
 
 @end
 
@@ -24,6 +26,7 @@
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
+        _swipeInteractionController = [[SwipeInteractionController alloc] init];
     }
     return self;
 }
@@ -85,6 +88,7 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         AnimationControllerBase *object = _objects[indexPath.row];
         [[segue destinationViewController] setDetailItem:object.animationName];
+        [self.swipeInteractionController wireToViewController:[segue destinationViewController] navigationController:self.navigationController];
     }
 }
 
@@ -97,6 +101,12 @@
     return self.animationController;
 }
 
+- (id <UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
+                          interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController
+{
+    return self.swipeInteractionController.interactionInProgress ? self.swipeInteractionController : nil;
+}
+
 
 #pragma mark - UINavigationControllerDelegate
 
@@ -105,7 +115,7 @@
                                                fromViewController:(UIViewController *)fromVC
                                                  toViewController:(UIViewController *)toVC
 {
-    self.animationController.isPopping = operation == UINavigationControllerOperationPop;
+    self.animationController.reverse = operation == UINavigationControllerOperationPop;
     return self.animationController;
 }
 @end

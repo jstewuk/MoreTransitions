@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3805FDB7185FE9BD00F265B4 /* SwipeInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3805FDB6185FE9BD00F265B4 /* SwipeInteractionController.m */; };
 		38064987185EB38D00406545 /* ExpandFromCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 38064986185EB38D00406545 /* ExpandFromCenter.m */; };
 		38A1D82E185E029900C9623A /* TopToBottom.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A1D82D185E029900C9623A /* TopToBottom.m */; };
 		38A1D831185E04D600C9623A /* AnimationControllerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A1D830185E04D600C9623A /* AnimationControllerBase.m */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3805FDB5185FE9BD00F265B4 /* SwipeInteractionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeInteractionController.h; sourceTree = "<group>"; };
+		3805FDB6185FE9BD00F265B4 /* SwipeInteractionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeInteractionController.m; sourceTree = "<group>"; };
 		38064985185EB38D00406545 /* ExpandFromCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandFromCenter.h; sourceTree = "<group>"; };
 		38064986185EB38D00406545 /* ExpandFromCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandFromCenter.m; sourceTree = "<group>"; };
 		38A1D82C185E029900C9623A /* TopToBottom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopToBottom.h; sourceTree = "<group>"; };
@@ -94,6 +97,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3805FDB3185FE93D00F265B4 /* AnimationControllers */ = {
+			isa = PBXGroup;
+			children = (
+				38A1D82F185E04D600C9623A /* AnimationControllerBase.h */,
+				38A1D830185E04D600C9623A /* AnimationControllerBase.m */,
+				38A1D82C185E029900C9623A /* TopToBottom.h */,
+				38A1D82D185E029900C9623A /* TopToBottom.m */,
+				38DC47F218588AB4007848B5 /* BottomToTop.h */,
+				38DC47F318588AB4007848B5 /* BottomToTop.m */,
+				38064985185EB38D00406545 /* ExpandFromCenter.h */,
+				38064986185EB38D00406545 /* ExpandFromCenter.m */,
+			);
+			name = AnimationControllers;
+			sourceTree = "<group>";
+		};
+		3805FDB4185FE97A00F265B4 /* InteractionControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3805FDB5185FE9BD00F265B4 /* SwipeInteractionController.h */,
+				3805FDB6185FE9BD00F265B4 /* SwipeInteractionController.m */,
+			);
+			name = InteractionControllers;
+			sourceTree = "<group>";
+		};
 		38DC47AE18588574007848B5 = {
 			isa = PBXGroup;
 			children = (
@@ -130,18 +157,12 @@
 				38DC47C918588574007848B5 /* AppDelegate.h */,
 				38DC47CA18588574007848B5 /* AppDelegate.m */,
 				38DC47CC18588574007848B5 /* Main.storyboard */,
-				38A1D82F185E04D600C9623A /* AnimationControllerBase.h */,
-				38A1D830185E04D600C9623A /* AnimationControllerBase.m */,
-				38A1D82C185E029900C9623A /* TopToBottom.h */,
-				38A1D82D185E029900C9623A /* TopToBottom.m */,
-				38DC47F218588AB4007848B5 /* BottomToTop.h */,
-				38DC47F318588AB4007848B5 /* BottomToTop.m */,
-				38064985185EB38D00406545 /* ExpandFromCenter.h */,
-				38064986185EB38D00406545 /* ExpandFromCenter.m */,
 				38DC47CF18588574007848B5 /* MasterViewController.h */,
 				38DC47D018588574007848B5 /* MasterViewController.m */,
 				38DC47D218588574007848B5 /* DetailViewController.h */,
 				38DC47D318588574007848B5 /* DetailViewController.m */,
+				3805FDB3185FE93D00F265B4 /* AnimationControllers */,
+				3805FDB4185FE97A00F265B4 /* InteractionControllers */,
 				38DC47D518588574007848B5 /* Images.xcassets */,
 				38DC47C118588574007848B5 /* Supporting Files */,
 			);
@@ -276,6 +297,7 @@
 			files = (
 				38A1D831185E04D600C9623A /* AnimationControllerBase.m in Sources */,
 				38DC47CB18588574007848B5 /* AppDelegate.m in Sources */,
+				3805FDB7185FE9BD00F265B4 /* SwipeInteractionController.m in Sources */,
 				38064987185EB38D00406545 /* ExpandFromCenter.m in Sources */,
 				38DC47D118588574007848B5 /* MasterViewController.m in Sources */,
 				38DC47F418588AB4007848B5 /* BottomToTop.m in Sources */,
